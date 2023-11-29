@@ -1,0 +1,44 @@
+.huruf {
+	font-family: segoe ui;
+	font-size: 12px;
+}
+.kotak {
+	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+	border-left: 1px solid lightgrey;
+	border-right: 1px solid lightgrey;
+	background-color: white;
+}
+.kolom {
+	background: #fafafa;
+	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+	border-left: 1px solid lightgrey;
+	border-right: 1px solid lightgrey;
+	border-radius: 3px;
+	padding-left: 13px;
+	padding-top: 10px;
+	height: 30px;
+	width: 240px;
+	font-family: segoe ui;
+	font-size: 13px;
+	color: grey;
+}
+.login {
+	background: #4db5f9;
+	border: 0px;
+	border-color: #4db5f9;
+	border-radius: 5px;
+	height: 25px;
+	width: 255px;
+	color: white;
+	font-family: segoe ui;
+	font-weight: 700;
+	font-size: 14px;
+	padding-top: 5px;
+}
+.bottom_text {
+	font-size: 10px;
+	color: grey;
+	font-family: sans-serif;
+}

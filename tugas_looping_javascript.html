@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tugas Looping Javascript</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid" style="height: 150px; padding: 40px;">
+  <div class="container">
+    <h3>Macam-Macam Looping</h3>      
+    <p>Pada Javascript</p>
+  </div>
+</div>
+<div class="container">
+  <p>Berikut ini adalah macam-macam looping pada javascript seperti for loop, for/in loop, for/of loop, while loop, dan do/while loop.</p><br>
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+          <h6>For Loop</h6>
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+        	<h3>Contoh Sintaks</h3><hr>
+        	    <xmp id="container" style="background-color: lightgray;">
+<p id="ForLoop"></p>
+
+<script>
+let text = "";
+
+for (let i = 0; i < 5; i++) {
+  text += "Angkanya adalah " + i + "<br>";
+}
+
+document.getElementById("ForLoop").innerHTML = text;
+</script>
+        	    </xmp>
+        </div>
+        <div class="card-body">
+          <h3>Hasil For Loop di Javascript</h3><hr>
+          <p id="ForLoop"></p>
+          <script>
+						let text = "";
+
+						for (let i = 0; i < 5; i++) {
+						  text += "Angkanya adalah " + i + "<br>";
+						}
+
+						document.getElementById("ForLoop").innerHTML = text;
+					</script>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+        <h6>For/In Loop</h6>
+      </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <h3>Contoh Sintaks</h3><hr>
+           <xmp id="container" style="background-color: lightgray;">
+<p id="ForInLoop"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+for (let x in numbers) {
+  txt += numbers[x] + "<br>"; 
+}
+
+document.getElementById("ForInLoop").innerHTML = txt;
+</script>
+           </xmp>
+        </div>
+        <div class="card-body">
+          <h3>Hasil For/In Loop di Javascript</h3><hr>
+          <p>Pernyataan for in dapat mengulang nilai himpunan sebagai berikut:</p>
+
+					<p id="ForInLoop"></p>
+
+					<script>
+					const numbers = [45, 4, 9, 16, 25];
+
+					let txt = "";
+					for (let x in numbers) {
+					  txt += numbers[x] + "<br>"; 
+					}
+
+					document.getElementById("ForInLoop").innerHTML = txt;
+					</script>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          <h6>For/Of Loop</h6>
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <h3>Contoh Sintaks</h3><hr>
+          <xmp id="container" style="background-color: lightgray;">
+<p id="ForOfLoop"></p>
+<script>
+const cars = ["BMW", "Volvo", "Mini"];
+
+let mobile = "";
+for (let x of cars) {
+  mobile += x + "<br>";
+}
+
+document.getElementById("ForOfLoop").innerHTML = mobile;
+</script>
+          </xmp> 
+        </div>
+        <div class="card-body">
+          <h3>Hasil For/of Loop di Javascript</h3><hr>
+          <p>Pernyataan perulangan for of melalui nilai-nilai dari setiap objek yang dapat diubah:</p>
+
+					<p id="ForOfLoop"></p>
+
+					<script>
+						const cars = ["BMW", "Volvo", "Mini"];
+
+						let mobile = "";
+						for (let x of cars) {
+						  mobile += x + "<br>";
+						}
+
+						document.getElementById("ForOfLoop").innerHTML = mobile;
+					</script>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseFour">
+          <h6>While Loop</h6>
+        </a>
+      </div>
+      <div id="collapseFour" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <h3>Contoh Sintaks</h3><hr> 
+          <xmp id="container" style="background-color: lightgray;">
+<p id="WhileLoop"></p>
+<script>
+let number = "";
+let i = 0;
+while (i < 10) {
+  number += "<br>Pengulangan ke-" + i;
+  i++;
+}
+document.getElementById("WhileLoop").innerHTML = number;
+</script>
+          </xmp>
+        </div>
+        <div class="card-body">
+          <h3>Hasil While Loop di Javascript</h3><hr>
+					<p id="WhileLoop"></p>
+
+					<script>
+					let number = "";
+					let i = 0;
+					while (i < 10) {
+					  number += "<br>Pengulangan ke-" + i;
+					  i++;
+					}
+					document.getElementById("WhileLoop").innerHTML = number;
+					</script>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseFive">
+          <h6>Do/While Loop</h6>
+        </a>
+      </div>
+      <div id="collapseFive" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <h3>Contoh Sintaks</h3><hr>
+          <xmp id="container" style="background-color: lightgray;">
+<p id="DoWhileLoop"></p>
+
+<script>
+let numb = ""
+let z = 0;
+
+do {
+  numb += "<br>Ini Perulangan ke-" + z;
+  z++;
+}
+while (z < 10);  
+
+document.getElementById("DoWhileLoop").innerHTML = numb;
+</script>
+          </xmp>
+        </div>
+        <div class="card-body">
+          <h3>Hasil Do/While Loop di Javascript</h3><hr>
+          <p id="DoWhileLoop"></p>
+
+					<script>
+					let numb = ""
+					let z = 0;
+
+					do {
+					  numb += "<br>Ini Perulangan ke-" + z;
+					  z++;
+					}
+					while (z < 10);  
+
+					document.getElementById("DoWhileLoop").innerHTML = numb;
+					</script>
+        </div>
+      </div>
+    </div>
+  </div>
+ <i>*source :</i><br>
+ <i>https://www.w3schools.com/js/js_loop_for.asp</i><br>
+ <i>https://www.w3schools.com/js/js_loop_forin.asp</i><br>
+ <i>https://www.w3schools.com/js/js_loop_forof.asp</i><br>
+ <i>https://www.w3schools.com/js/js_loop_while.asp</i><br>
+</div>
+</body>
+</html>
+

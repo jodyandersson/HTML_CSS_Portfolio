@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tugas Looping Javascript</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid" style="height: 150px; padding: 40px;">
+  <div class="container">
+    <h3>Macam-Macam Function</h3>      
+    <p>Pada Javascript menggunakan parameter</p>
+  </div>
+</div>
+<div class="container">
+  <p>Berikut ini adalah macam-macam function di javascript menggunakan parameter seperti Default Parameter, dan Rest Parameter, dan Argument Object.</p><br>
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+          <h6>Default Parameter</h6>
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+        	<h3>Contoh Sintaks</h3><hr>
+        	<h5>Contoh 1</h5>
+        	    <xmp id="container" style="background-color: lightgray;">
+<p id="default_parameter"></p>
+
+<script>
+function myFunction(x, y) {
+  if (y === undefined) {
+    y = 2;
+  }  
+  return x * y;
+}
+document.getElementById("default_parameter").innerHTML = myFunction(8);
+</script>
+        	    </xmp>
+        	<h5>Contoh 2</h5>
+<xmp id="container" style="background-color: lightgray;">
+<p>jika nilai b tidak diketahui, maka b = 10:</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(a, b = 10) {
+  return a + b;
+}
+document.getElementById("demo").innerHTML = myFunction(5);
+</script>
+						</xmp>
+        </div>
+        <div class="card-body">
+          <h3>Contoh Hasil Default Parameter di Javascript</h3><hr>
+          <p>Mengatur nilai default ke sebuah parameter fungsi</p>
+          <h5>Contoh 1</h5>
+					<p id="default_parameter"></p>
+					<script>
+					function myFunction(x, y) {
+					  if (y === undefined) {
+					    y = 2;
+					  }  
+					  return x * y;
+					}
+					document.getElementById("default_parameter").innerHTML = myFunction(8);
+					</script>
+					<br>
+					<h5>Contoh 2</h5>
+					<p>jika nilai b tidak diketahui, maka b = 10:</p>
+<p id="demo"></p>
+
+<script>
+function myFunction(a, b = 10) {
+  return a + b;
+}
+document.getElementById("demo").innerHTML = myFunction(5);
+</script>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+        <h6>Rest Parameter</h6>
+      </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <h3>Contoh Sintaks</h3><hr>
+           <xmp id="container" style="background-color: lightgray;">
+<p>Rest Parameter memungkinkan sebuah fungsi untuk memperlakukan jumlah argumen yang tidak terbatas sebagai sebuah array:</p>
+
+<p id="rest_param"></p>
+
+<script>
+function sum(...args) {
+  let sum = 0;
+  for (let arg of args) sum += arg;
+  return sum;
+}
+
+let c = sum(4, 9, 16, 25, 29, 100, 66, 77);
+
+document.getElementById("rest_param").innerHTML = c;
+</script>
+           </xmp>
+        </div>
+        <div class="card-body">
+          <h3>Contoh Hasil Rest Parameter di Javascript</h3><hr>
+          <p>Rest Parameter memungkinkan sebuah fungsi untuk memperlakukan jumlah argumen yang tidak terbatas 
+          sebagai sebuah array:</p>
+
+					<p id="rest_param"></p>
+
+					<script>
+					function sum(...args) {
+					  let sum = 0;
+					  for (let arg of args) sum += arg;
+					  return sum;
+					}
+
+					let c = sum(4, 9, 16, 25, 29, 100, 66, 77);
+
+					document.getElementById("rest_param").innerHTML = c;
+					</script>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          <h6>Argument Object</h6>
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <h3>Contoh Sintaks</h3><hr>
+          <h5>Contoh 1</h5>
+        	    <xmp id="container" style="background-color: lightgray;">
+<p>Mencari nilai terbesar.</p>
+<p id="demo2"></p>
+
+<script>
+function findMax() {
+  let max = -Infinity;
+  for(let i = 0; i < arguments.length; i++) {
+    if (arguments[i] > max) {
+      max = arguments[i];
+    }
+  }
+  return max;
+} 
+document.getElementById("demo2").innerHTML = findMax(4, 5, 6);
+</script>
+        	    </xmp>
+        	<h5>Contoh 2</h5>
+        		<xmp id="container" style="background-color: lightgray;">
+<p>Jumlah dari seluruh Argumen:</p>
+<p id="demo3"></p>
+
+<script>
+function sumAll() {
+  let sum = 0;
+  for(let d = 0; d < arguments.length; d++) {
+    sum += arguments[d];
+  }
+  return sum;
+}
+document.getElementById("demo3").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+</script>
+						</xmp>
+        </div>
+        <div class="card-body">
+          <h3>Contoh Hasil Argument Object di Javascript</h3><hr>
+          <h5>Contoh 1</h5>
+          <p>Mencari nilai terbesar.</p>
+					<p id="demo2"></p>
+
+					<script>
+					function findMax() {
+					  let max = -Infinity;
+					  for(let i = 0; i < arguments.length; i++) {
+					    if (arguments[i] > max) {
+					      max = arguments[i];
+					    }
+					  }
+					  return max;
+					} 
+					document.getElementById("demo2").innerHTML = findMax(4, 5, 6);
+					</script>
+					<br>
+					<h5>Contoh 2</h5>
+					<p>Jumlah dari seluruh Argumen:</p>
+					<p id="demo3"></p>
+
+					<script>
+					function sumAll() {
+					  let sum = 0;
+					  for(let d = 0; d < arguments.length; d++) {
+					    sum += arguments[d];
+					  }
+					  return sum;
+					}
+					document.getElementById("demo3").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+					</script>
+        </div>
+      </div>
+    </div>
+    </div>
+     <i>*source :</i><br>
+     <i>https://www.w3schools.com/js/js_function_parameters.asp</i><br>
+  </div>
+</div>
+</body>
+</html>
+

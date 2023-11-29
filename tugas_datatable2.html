@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>studi kasus jquery 2</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+	<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+</head>
+<body>
+ <h1 align="center">F1 Race Results</h1>      
+ <p align="center">FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2023</p>
+	<table id="table_id" class="display">
+		<thead>
+			<tr>
+				<th>Pos.</th>
+				<th>No.</th>
+				<th>Driver</th>
+				<th>Car</th>
+				<th>Laps</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>1</th>
+				<th>11</th>
+				<th>Sergio Perez</th>
+				<th>Red Bull Racing Honda</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>2</th>
+				<th>1</th>
+				<th>Max Verstappen</th>
+				<th>Red Bull Racing Honda</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>3</th>
+				<th>14</th>
+				<th>Fernando Alonso</th>
+				<th>Aston Martin Aramco</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>4</th>
+				<th>63</th>
+				<th>George Russel</th>
+				<th>Mercedes AMG</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>5</th>
+				<th>44</th>
+				<th>Lewis Hamilton</th>
+				<th>Mercedes AMG</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>6</th>
+				<th>55</th>
+				<th>Carlos Sainz</th>
+				<th>Scuderia Ferrari</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>7</th>
+				<th>16</th>
+				<th>Charles Leclerc</th>
+				<th>Scuderia Ferrari</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>8</th>
+				<th>31</th>
+				<th>Esteban Ocon</th>
+				<th>Alpine Renault</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>9</th>
+				<th>10</th>
+				<th>Pierre Gasly</th>
+				<th>Alpine Renault</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>10</th>
+				<th>20</th>
+				<th>Kevin Magnussen</th>
+				<th>Haas Ferrari</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>11</th>
+				<th>22</th>
+				<th>Yuki Tsunoda</th>
+				<th>Alphatauri Honda</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>12</th>
+				<th>27</th>
+				<th>Nico Hulkenberg</th>
+				<th>Haas Ferrari</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>13</th>
+				<th>24</th>
+				<th>Guanyu Zhou</th>
+				<th>Alfa Romeo</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>14</th>
+				<th>21</th>
+				<th>Nyck De Vries</th>
+				<th>Alphatauri Honda</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>15</th>
+				<th>81</th>
+				<th>Oscar Piastri</th>
+				<th>Mclaren Mercedes</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>16</th>
+				<th>2</th>
+				<th>Logan Sargeant</th>
+				<th>Williams Racing</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>17</th>
+				<th>4</th>
+				<th>Lando Norris</th>
+				<th>Mclaren Mercedes</th>
+				<th>50</th>
+			</tr>
+			<tr>
+				<th>18</th>
+				<th>77</th>
+				<th>Valtteri Bottas</th>
+				<th>Alfa Romeo</th>
+				<th>49</th>
+			</tr>
+			<tr>
+				<th>19</th>
+				<th>23</th>
+				<th>Alexander Albon</th>
+				<th>Williams Racing</th>
+				<th>27</th>
+			</tr>
+			<tr>
+				<th>20</th>
+				<th>18</th>
+				<th>Lance Stroll</th>
+				<th>Aston Martin Aramco</th>
+				<th>16</th>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#table_id').DataTable();
+	});
+</script>
